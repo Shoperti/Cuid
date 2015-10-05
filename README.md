@@ -1,5 +1,8 @@
 # Shoperti Cuid
 
+[![Build Status](https://travis-ci.org/Shoperti/Cuid.svg?branch=master)](https://travis-ci.org/Shoperti/Cuid)
+[![StyleCI](https://styleci.io/repos/43709599/shield)](https://styleci.io/repos/43709599)
+
 This is a port from https://github.com/ericelliott/cuid to PHP. Please refer to the original repo for more information.
 
 ## Installation
