@@ -57,7 +57,7 @@ class CuidFactory
     }
 
     /**
-     * Pads the input string into specific size
+     * Pads the input string into specific size.
      *
      * @param string $str
      * @param int    $size
@@ -103,6 +103,7 @@ class CuidFactory
     {
         $this->counter = ($this->counter < $this->discreteValues) ? $this->counter : 0;
         ++$this->counter;
+
         return $this->counter - 1;
     }
 
@@ -113,8 +114,10 @@ class CuidFactory
      *
      * @return string
      */
-    protected function charCodeAt($str) {
+    protected function charCodeAt($str)
+    {
         list(, $ord) = unpack('N', mb_convert_encoding($str, 'UCS-4BE', 'UTF-8'));
+
         return $ord;
     }
 
@@ -160,7 +163,7 @@ class CuidFactory
         // timestamp
         // warning: this exposes the exact date and time
         // that the uid was created.
-        $timestamp = base_convert(substr(microtime(true)*1000, 0, 13), 10, self::BASE);
+        $timestamp = base_convert(substr(microtime(true) * 1000, 0, 13), 10, self::BASE);
 
         // A few chars to generate distinct ids for different
         // clients (so different computers are far less
@@ -183,10 +186,11 @@ class CuidFactory
      */
     public function slug()
     {
-        $timestamp = base_convert(substr(microtime(true)*1000, 0, 13), 10, self::BASE);
+        $timestamp = base_convert(substr(microtime(true) * 1000, 0, 13), 10, self::BASE);
         $counter = substr(base_convert((int) $this->safeCounter(), 10, self::BASE), -4);
-        $fingerprint = substr($this->fingerprint(), 0 ,1).substr($this->fingerprint(), -1);
+        $fingerprint = substr($this->fingerprint(), 0, 1).substr($this->fingerprint(), -1);
         $random = substr($this->randomBlock(), -2);
+
         return (substr($timestamp, -2).$counter.$fingerprint.$random);
     }
 }
