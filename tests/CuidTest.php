@@ -23,7 +23,7 @@ class CuidTest extends \PHPUnit_Framework_TestCase
     const MAX = 100000;
 
     /** @test */
-    function it_shoud_return_string()
+    public function it_shoud_return_string()
     {
         $Cuid = Cuid::Cuid();
 
@@ -31,7 +31,7 @@ class CuidTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_should_not_collide()
+    public function it_should_not_collide()
     {
         $i = 0;
         $ids = [];
@@ -54,7 +54,7 @@ class CuidTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_should_not_collide_making_slug()
+    public function it_should_not_collide_making_slug()
     {
         $i = 0;
         $ids = [];
