@@ -1,1 +1,1 @@
-# Shoperti Ciud
+# Shoperti Cuid

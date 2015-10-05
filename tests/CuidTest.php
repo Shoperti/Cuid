@@ -9,25 +9,25 @@
  * file that was distributed with this source code.
  */
 
-namespace Shoperti\Tests\Ciud;
+namespace Shoperti\Tests\Cuid;
 
-use Shoperti\Ciud\Ciud;
+use Shoperti\Cuid\Cuid;
 
 /**
- * This is the Ciud test class.
+ * This is the Cuid test class.
  *
  * @author Joseph Cohen <joe@shoperti.com>
  */
-class CiudTest extends \PHPUnit_Framework_TestCase
+class CuidTest extends \PHPUnit_Framework_TestCase
 {
     const MAX = 100000;
 
     /** @test */
     function it_shoud_return_string()
     {
-        $ciud = Ciud::ciud();
+        $Cuid = Cuid::Cuid();
 
-        $this->assertInternalType('string', $ciud);
+        $this->assertInternalType('string', $Cuid);
     }
 
     /** @test */
@@ -38,7 +38,7 @@ class CiudTest extends \PHPUnit_Framework_TestCase
         $pass = true;
 
         while ($i < self::MAX) {
-            $id = Ciud::ciud();
+            $id = Cuid::Cuid();
 
             if (!isset($ids[$id])) {
                 $ids[$id] = $id;
@@ -61,7 +61,7 @@ class CiudTest extends \PHPUnit_Framework_TestCase
         $pass = true;
 
         while ($i < self::MAX) {
-            $id = Ciud::slug();
+            $id = Cuid::slug();
 
             if (!isset($ids[$id])) {
                 $ids[$id] = $id;

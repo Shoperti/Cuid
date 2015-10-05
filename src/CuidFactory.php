@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Shoperti\Ciud;
+namespace Shoperti\Cuid;
 
 /**
- * This is the Ciud class.
+ * This is the Cuid class.
  *
  * @author Joseph Cohen <joe@shoperti.com>
  */
-class CiudFactory
+class CuidFactory
 {
     /**
      * The base string constant.
@@ -47,7 +47,7 @@ class CiudFactory
     private $discreteValues;
 
     /**
-     * Creates a new ciud factory instance.
+     * Creates a new Cuid factory instance.
      *
      * @return void
      */
@@ -145,13 +145,13 @@ class CiudFactory
     }
 
     /**
-     * Generates a new ciud.
+     * Generates a new Cuid.
      *
      * @param string|null $prefix
      *
      * @return string
      */
-    public function ciud($prefix = null)
+    public function Cuid($prefix = null)
     {
         // Starting with a lowercase letter makes
         // it HTML element ID friendly.

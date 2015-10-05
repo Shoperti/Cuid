@@ -9,46 +9,46 @@
  * file that was distributed with this source code.
  */
 
-namespace Shoperti\Ciud;
+namespace Shoperti\Cuid;
 
 /**
- * This is the Ciud class.
+ * This is the Cuid class.
  *
  * @author Joseph Cohen <joe@shoperti.com>
  */
-class Ciud
+class Cuid
 {
     /**
      * The factory to use when creating UUIDs.
      *
-     * @var \Shoperti\Ciud\CiudFactory
+     * @var \Shoperti\Cuid\CuidFactory
      */
     private static $factory = null;
 
     /**
-     * Returns the currently set factory used to create Ciuds.
+     * Returns the currently set factory used to create Cuids.
      *
-     * @return \Shoperti\Ciud\CiudFactory
+     * @return \Shoperti\Cuid\CuidFactory
      */
     public static function getFactory()
     {
         if (!self::$factory) {
-            self::$factory = new CiudFactory();
+            self::$factory = new CuidFactory();
         }
 
         return self::$factory;
     }
 
     /**
-     * Generates a new ciud.
+     * Generates a new Cuid.
      *
      * @param string|null $prefix
      *
      * @return string
      */
-    public static function ciud($prefix = null)
+    public static function Cuid($prefix = null)
     {
-        return static::getFactory()->ciud($prefix);
+        return static::getFactory()->Cuid($prefix);
     }
 
     /**
