@@ -151,11 +151,11 @@ class CuidFactory
      *
      * @return string
      */
-    public function Cuid($prefix = null)
+    public function cuid()
     {
         // Starting with a lowercase letter makes
         // it HTML element ID friendly.
-        $letter = $prefix ?: 'c'; // hard-coded allows for sequential access
+        $letter = 'c'; // hard-coded allows for sequential access
 
         // timestamp
         // warning: this exposes the exact date and time

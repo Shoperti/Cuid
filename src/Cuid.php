@@ -42,13 +42,11 @@ class Cuid
     /**
      * Generates a new Cuid.
      *
-     * @param string|null $prefix
-     *
      * @return string
      */
-    public static function Cuid($prefix = null)
+    public static function cuid()
     {
-        return static::getFactory()->Cuid($prefix);
+        return static::getFactory()->cuid();
     }
 
     /**
@@ -56,8 +54,8 @@ class Cuid
      *
      * @return string
      */
-    public static function slug($prefix = null)
+    public static function slug()
     {
-        return static::getFactory()->slug($prefix);
+        return static::getFactory()->slug();
     }
 }
