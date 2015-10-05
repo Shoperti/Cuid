@@ -1,0 +1,33 @@
+{
+    "name": "shoperti/ciud",
+    "description": "Collision-resistant ids optimized for horizontal scaling and performance.",
+    "license": "MIT",
+    "keywords": [
+        "ciud",
+        "shoperti",
+        "php"
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shoperti\\Ciud\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shoperti\\Tests\\Ciud\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
