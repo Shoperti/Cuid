@@ -8,7 +8,7 @@ Begin by installing this package through Composer. Edit your project's `composer
 
 ```json
 "require": {
-  "shoperti/cuid": "dev-master"
+  "shoperti/cuid": "~1.0"
 }
 ```
 
