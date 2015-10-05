@@ -22,12 +22,16 @@ class CiudTest extends \PHPUnit_Framework_TestCase
 {
     const MAX = 100000;
 
-    // function testSlug()
-    // {
-    //     Ciud::slug();
-    // }
+    /** @test */
+    function it_shoud_return_string()
+    {
+        $ciud = Ciud::ciud();
 
-    function testCollition()
+        $this->assertInternalType('string', $ciud);
+    }
+
+    /** @test */
+    function it_should_not_collide()
     {
         $i = 0;
         $ids = [];
@@ -49,7 +53,8 @@ class CiudTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($pass);
     }
 
-    function testSlugCollition()
+    /** @test */
+    function it_should_not_collide_making_slug()
     {
         $i = 0;
         $ids = [];
