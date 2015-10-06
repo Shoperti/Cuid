@@ -38,7 +38,6 @@ class CuidTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $Cuid);
     }
 
-
     /** @test */
     public function it_should_not_collide()
     {
@@ -57,7 +56,7 @@ class CuidTest extends \PHPUnit_Framework_TestCase
     public function it_should_not_collide_making_slug()
     {
         $ids = [];
-        
+
         for ($i = 1; $i <= static::MAX; $i++) {
             $id = Cuid::slug();
 
