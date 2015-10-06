@@ -25,54 +25,45 @@ class CuidTest extends \PHPUnit_Framework_TestCase
     /** @test */
     public function it_shoud_return_string()
     {
-        $Cuid = Cuid::Cuid();
+        $Cuid = Cuid::cuid();
 
         $this->assertInternalType('string', $Cuid);
     }
 
     /** @test */
+    public function it_shoud_return_string_making_slug()
+    {
+        $Cuid = Cuid::slug();
+
+        $this->assertInternalType('string', $Cuid);
+    }
+
+
+    /** @test */
     public function it_should_not_collide()
     {
-        $i = 0;
         $ids = [];
-        $pass = true;
 
-        while ($i < self::MAX) {
-            $id = Cuid::Cuid();
+        for ($i = 1; $i <= static::MAX; $i++) {
+            $id = Cuid::cuid();
 
-            if (!isset($ids[$id])) {
-                $ids[$id] = $id;
-            } else {
-                $pass = false;
-                break;
-            }
+            $this->assertFalse(isset($ids[$id]));
 
-            ++$i;
+            $ids[$id] = $i;
         }
-
-        $this->assertTrue($pass);
     }
 
     /** @test */
     public function it_should_not_collide_making_slug()
     {
-        $i = 0;
         $ids = [];
-        $pass = true;
-
-        while ($i < self::MAX) {
+        
+        for ($i = 1; $i <= static::MAX; $i++) {
             $id = Cuid::slug();
 
-            if (!isset($ids[$id])) {
-                $ids[$id] = $id;
-            } else {
-                $pass = false;
-                break;
-            }
+            $this->assertFalse(isset($ids[$id]));
 
-            ++$i;
+            $ids[$id] = $i;
         }
-
-        $this->assertTrue($pass);
     }
 }
