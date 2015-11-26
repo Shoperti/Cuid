@@ -21,6 +21,7 @@ use Shoperti\Cuid\Cuid;
 class CuidTest extends \PHPUnit_Framework_TestCase
 {
     const MAX = 100000;
+    const MIN = 20000;
 
     /** @test */
     public function it_shoud_return_string()
@@ -57,7 +58,7 @@ class CuidTest extends \PHPUnit_Framework_TestCase
     {
         $ids = [];
 
-        for ($i = 1; $i <= static::MAX; $i++) {
+        for ($i = 1; $i <= static::MIN; $i++) {
             $id = Cuid::slug();
 
             $this->assertFalse(isset($ids[$id]));
